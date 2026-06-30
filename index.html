@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Библиотека анимационных блоков</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/global.css" />
+  </head>
+  <body>
+    <main class="library-page">
+      <section class="library-hero">
+        <div>
+          <p class="library-kicker">Animation blocks</p>
+          <h1>Библиотека отдельных анимационных блоков</h1>
+          <p>
+            Здесь можно хранить и показывать разные блоки отдельными страницами.
+            Каждый блок открывается по своему адресу через слэш.
+          </p>
+        </div>
+      </section>
+
+      <section class="block-grid" aria-label="Список блоков" data-block-grid></section>
+    </main>
+
+    <script src="./src/library.js"></script>
+  </body>
+</html>
