@@ -3,8 +3,8 @@ const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches
 const rail = document.querySelector("[data-card-deck]");
 const cards = Array.from(document.querySelectorAll(".card-motion"));
 const stackRotations = ["-7deg", "-2deg", "3deg", "-4deg", "6deg"];
-const midRotations = ["-2.8deg", "-0.8deg", "1.2deg", "-1.5deg", "2.5deg"];
-const settleRotations = ["0.5deg", "-0.3deg", "0.2deg", "-0.4deg", "0.35deg"];
+const midARotations = ["-5deg", "-1.4deg", "2.2deg", "-2.8deg", "4.2deg"];
+const midBRotations = ["-1.4deg", "-0.4deg", "0.7deg", "-0.8deg", "1.2deg"];
 
 const prepareDeck = () => {
   if (!rail || !cards.length) return;
@@ -14,7 +14,7 @@ const prepareDeck = () => {
   const deckY = railRect.top + railRect.height / 2 - 8;
 
   rail.classList.add("is-stacked");
-  rail.classList.remove("is-ready", "is-spread");
+  rail.classList.remove("is-spread");
 
   cards.forEach((card, index) => {
     const rect = card.getBoundingClientRect();
@@ -24,21 +24,21 @@ const prepareDeck = () => {
     card.classList.remove("is-entered");
     card.style.setProperty("--from-x", `${fromX}px`);
     card.style.setProperty("--from-y", `${fromY}px`);
-    card.style.setProperty("--mid-x", `${fromX * 0.34}px`);
-    card.style.setProperty("--mid-y", `${fromY * 0.34 - 18}px`);
+    card.style.setProperty("--mid-a-x", `${fromX * 0.68}px`);
+    card.style.setProperty("--mid-a-y", `${fromY * 0.68 - 4}px`);
+    card.style.setProperty("--mid-b-x", `${fromX * 0.18}px`);
+    card.style.setProperty("--mid-b-y", `${fromY * 0.18 - 6}px`);
     card.style.setProperty("--stack-rotate", stackRotations[index] || "0deg");
-    card.style.setProperty("--mid-rotate", midRotations[index] || "0deg");
-    card.style.setProperty("--settle-rotate", settleRotations[index] || "0deg");
+    card.style.setProperty("--mid-a-rotate", midARotations[index] || "0deg");
+    card.style.setProperty("--mid-b-rotate", midBRotations[index] || "0deg");
     card.style.setProperty("--stack-order", String(cards.length - index));
-    card.style.setProperty("--deal-delay", `${0.1 + index * 0.1}s`);
+    card.style.setProperty("--deal-delay", `${0.05 + index * 0.045}s`);
   });
 
   requestAnimationFrame(() => {
-    rail.classList.add("is-ready");
-
-    window.setTimeout(() => {
+    requestAnimationFrame(() => {
       rail.classList.add("is-spread");
-    }, 620);
+    });
   });
 };
 
@@ -49,7 +49,7 @@ cards.forEach((card, index) => {
     card.classList.add("is-entered");
 
     if (index === cards.length - 1 && rail) {
-      rail.classList.remove("is-stacked", "is-ready", "is-spread");
+      rail.classList.remove("is-stacked", "is-spread");
     }
   }, { once: true });
 });
