@@ -67,6 +67,9 @@ h1 {
   line-height: 1.03;
   letter-spacing: 0;
   text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(34px);
+  animation: mapTitleIn 0.82s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
 }
 
 .map-window {
@@ -99,8 +102,37 @@ h1 {
     radial-gradient(circle at 100% 0%, rgba(159, 183, 189, 0.2), transparent 10rem);
   box-shadow: 0 22px 58px rgba(104, 25, 30, 0.1);
   transform-style: preserve-3d;
+  opacity: 0;
+  transform: translateY(74px) rotateX(11deg) rotateZ(var(--enter-rotate, 0deg)) scale(0.94);
+  transform-origin: 50% 100%;
   transition: border-color 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  animation: mapCardIn 0.92s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   backface-visibility: hidden;
+}
+
+.map-card:nth-child(1) {
+  --enter-rotate: -2.4deg;
+  animation-delay: 0.32s;
+}
+
+.map-card:nth-child(2) {
+  --enter-rotate: 1.4deg;
+  animation-delay: 0.44s;
+}
+
+.map-card:nth-child(3) {
+  --enter-rotate: -0.8deg;
+  animation-delay: 0.56s;
+}
+
+.map-card:nth-child(4) {
+  --enter-rotate: 1.8deg;
+  animation-delay: 0.68s;
+}
+
+.map-card:nth-child(5) {
+  --enter-rotate: -1.2deg;
+  animation-delay: 0.8s;
 }
 
 .map-card:nth-child(2n) {
@@ -197,11 +229,44 @@ h1 {
   line-height: 1.32;
 }
 
-.map-after {
-  margin: clamp(54px, 7vw, 88px) 0 0;
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(36px, 4.2vw, 68px);
-  line-height: 1;
+.map-card.is-entered {
+  opacity: 1;
+}
+
+@keyframes mapTitleIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mapCardIn {
+  0% {
+    opacity: 0;
+    transform: translateY(74px) rotateX(11deg) rotateZ(var(--enter-rotate, 0deg)) scale(0.94);
+    filter: blur(5px);
+  }
+
+  62% {
+    opacity: 1;
+    transform: translateY(-8px) rotateX(-1deg) rotateZ(calc(var(--enter-rotate, 0deg) * -0.25)) scale(1.012);
+    filter: blur(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg) rotateZ(0deg) scale(1);
+    filter: blur(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  h1,
+  .map-card {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
 }
 
 @media (max-width: 1120px) {
