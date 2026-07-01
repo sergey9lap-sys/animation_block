@@ -1,0 +1,123 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, system-ui, sans-serif;
+  color: #fff1dc;
+  background:
+    radial-gradient(circle at 72% 48%, rgba(176, 128, 188, 0.42), transparent 28%),
+    linear-gradient(120deg, #3a2375, #4c2f85);
+}
+
+.back-link {
+  position: fixed;
+  z-index: 10;
+  top: 24px;
+  left: 24px;
+  padding: 14px 22px;
+  border: 1px solid rgba(255, 241, 220, 0.26);
+  border-radius: 999px;
+  color: #fff1dc;
+  text-decoration: none;
+  font-weight: 800;
+  background: rgba(22, 10, 42, 0.26);
+}
+
+.care {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 0.58fr 0.42fr;
+  align-items: center;
+  gap: 42px;
+  width: min(1320px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.message-layer span {
+  position: absolute;
+  padding: 12px 18px;
+  border-radius: 8px;
+  color: #5f5280;
+  background: rgba(255, 255, 255, 0.9);
+  font-weight: 900;
+  box-shadow: 0 14px 28px rgba(25, 11, 43, 0.2);
+  animation: float 5s ease-in-out infinite;
+}
+
+.message-layer span:nth-child(1) { left: 55%; top: 28%; }
+.message-layer span:nth-child(2) { right: 10%; top: 18%; animation-delay: 0.8s; }
+.message-layer span:nth-child(3) { right: -2%; top: 43%; animation-delay: 1.5s; }
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 26px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  color: #2f176b;
+  background: #ffe1bf;
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0 0 22px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(54px, 6vw, 92px);
+  line-height: 0.96;
+}
+
+p {
+  margin: 0 0 34px;
+  font-size: 21px;
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.links a {
+  min-width: 128px;
+  padding: 18px 24px;
+  border-radius: 999px;
+  color: #5b37c7;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 900;
+  background: #fff1dc;
+}
+
+img {
+  position: relative;
+  z-index: 1;
+  justify-self: center;
+  width: min(330px, 78vw);
+  filter: drop-shadow(0 26px 55px rgba(18, 8, 32, 0.45));
+  animation: phoneIn 0.9s ease both;
+}
+
+@keyframes float {
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes phoneIn {
+  from { opacity: 0; transform: translateY(24px) scale(0.96); }
+}
+
+@media (max-width: 900px) {
+  .care {
+    grid-template-columns: 1fr;
+  }
+
+  .message-layer span {
+    display: none;
+  }
+}

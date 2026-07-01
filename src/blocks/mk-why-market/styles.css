@@ -1,0 +1,115 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, system-ui, sans-serif;
+  color: #fff8ee;
+  background:
+    linear-gradient(rgba(255, 248, 238, 0.035) 1px, transparent 1px) 0 0 / 44px 44px,
+    linear-gradient(90deg, rgba(255, 248, 238, 0.035) 1px, transparent 1px) 0 0 / 44px 44px,
+    radial-gradient(circle at 68% 66%, rgba(198, 111, 63, 0.26), transparent 26%),
+    linear-gradient(120deg, #261016, #5a2d36);
+}
+
+.back-link {
+  position: fixed;
+  z-index: 10;
+  top: 24px;
+  left: 24px;
+  padding: 14px 22px;
+  border: 1px solid rgba(255, 248, 238, 0.24);
+  border-radius: 999px;
+  color: #fff8ee;
+  text-decoration: none;
+  font-weight: 800;
+  background: rgba(20, 8, 11, 0.26);
+}
+
+.why {
+  width: min(1280px, calc(100% - 48px));
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 105px 0 80px;
+}
+
+.why > span {
+  display: block;
+  margin-bottom: 22px;
+  color: #e2ad80;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+h1 {
+  max-width: 1050px;
+  margin: 0 0 70px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(42px, 5vw, 72px);
+  line-height: 1.08;
+}
+
+article {
+  position: relative;
+  width: min(760px, 100%);
+  min-height: 420px;
+  margin: 0 auto;
+  padding: 88px 52px 52px;
+  border: 1px solid rgba(255, 248, 238, 0.25);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 76% 20%, rgba(202, 119, 69, 0.28), transparent 30%),
+    rgba(62, 31, 36, 0.65);
+  box-shadow: 0 28px 90px rgba(25, 8, 12, 0.36);
+  transform: rotate(-1deg);
+  overflow: hidden;
+}
+
+article::before,
+article::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(255, 248, 238, 0.45);
+}
+
+article::before { inset: 28px auto auto 24px; width: 62px; height: 62px; border-right: 0; border-bottom: 0; }
+article::after { inset: auto 24px 24px auto; width: 62px; height: 62px; border-left: 0; border-top: 0; }
+
+small,
+i {
+  position: absolute;
+  top: 42px;
+  color: #e2ad80;
+  font-weight: 900;
+  font-style: normal;
+}
+
+small { left: 52px; }
+i { right: 52px; }
+
+h2 {
+  max-width: 470px;
+  margin: 0 0 24px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(38px, 4vw, 58px);
+  line-height: 0.96;
+}
+
+p {
+  max-width: 520px;
+  margin: 0;
+  color: rgba(255, 248, 238, 0.78);
+  font-size: 18px;
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+b {
+  position: absolute;
+  right: 26px;
+  bottom: -12px;
+  color: rgba(255, 248, 238, 0.12);
+  font-size: 132px;
+  line-height: 1;
+}

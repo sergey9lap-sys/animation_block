@@ -1,0 +1,118 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, system-ui, sans-serif;
+  color: #fff8ee;
+  background:
+    radial-gradient(circle at 72% 48%, rgba(255, 248, 238, 0.12), transparent 22%),
+    linear-gradient(120deg, #32181d, #12080b);
+}
+
+.back-link {
+  position: fixed;
+  z-index: 10;
+  top: 24px;
+  left: 24px;
+  padding: 14px 22px;
+  border: 1px solid rgba(255, 248, 238, 0.24);
+  border-radius: 999px;
+  color: #fff8ee;
+  text-decoration: none;
+  font-weight: 800;
+  background: rgba(20, 8, 11, 0.26);
+}
+
+.support {
+  position: relative;
+  width: min(1320px, calc(100% - 48px));
+  min-height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.62fr 0.38fr;
+  align-items: center;
+  gap: 40px;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.ambient span {
+  position: absolute;
+  color: rgba(255, 248, 238, 0.09);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(44px, 5vw, 82px);
+  font-weight: 700;
+}
+
+.ambient span:nth-child(1) { left: 0; top: 16%; }
+.ambient span:nth-child(2) { right: 8%; top: 26%; }
+.ambient span:nth-child(3) { left: 44%; top: 52%; }
+.ambient span:nth-child(4) { left: 10%; bottom: 16%; }
+
+.copy {
+  position: relative;
+  z-index: 1;
+}
+
+.copy > span {
+  display: block;
+  margin-bottom: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+h1 {
+  margin: 0 0 28px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(56px, 6vw, 94px);
+  line-height: 0.96;
+}
+
+p {
+  max-width: 640px;
+  margin: 0 0 34px;
+  font-size: 20px;
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+.copy div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+a {
+  color: inherit;
+}
+
+.copy a {
+  min-width: 128px;
+  padding: 18px 24px;
+  border-radius: 999px;
+  color: #3d2024;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 900;
+  background: #fff4df;
+}
+
+img {
+  position: relative;
+  z-index: 1;
+  justify-self: center;
+  width: min(330px, 78vw);
+  filter: drop-shadow(0 24px 54px rgba(0, 0, 0, 0.44));
+}
+
+@media (max-width: 900px) {
+  .support {
+    grid-template-columns: 1fr;
+  }
+
+  .ambient {
+    display: none;
+  }
+}

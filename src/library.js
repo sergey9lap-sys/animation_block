@@ -47,6 +47,48 @@ const blocks = [
     description: "Досье участников мастер-класса в виде раскладки карточек.",
     href: "./mk-dossiers/",
   },
+  {
+    number: "09",
+    title: "Expert 2026 / problems",
+    description: "Блок «Узнали себя?» с карточками тревог, соединенными линиями.",
+    href: "./expert-problems/",
+  },
+  {
+    number: "10",
+    title: "Expert 2026 / webinar plan",
+    description: "Маршрут вебинара из четырех шагов с плавной линией.",
+    href: "./expert-webinar-plan/",
+  },
+  {
+    number: "11",
+    title: "Expert 2026 / contact",
+    description: "Фиолетовый блок службы заботы с телефоном и мессенджерами.",
+    href: "./expert-contact/",
+  },
+  {
+    number: "12",
+    title: "Best / audience",
+    description: "Полароидные карточки аудиторий вебинара.",
+    href: "./best-audience/",
+  },
+  {
+    number: "13",
+    title: "MK Product / why market",
+    description: "Кинематографичный темный блок про рынок премиальных продуктов.",
+    href: "./mk-why-market/",
+  },
+  {
+    number: "14",
+    title: "MK Product / after",
+    description: "Сравнение «было / стало» после мастер-класса.",
+    href: "./mk-after/",
+  },
+  {
+    number: "15",
+    title: "MK Product / contact",
+    description: "Темный контактный блок с фоновыми вопросами и телефоном.",
+    href: "./mk-contact/",
+  },
 ];
 
 const blockGrid = document.querySelector("[data-block-grid]");
