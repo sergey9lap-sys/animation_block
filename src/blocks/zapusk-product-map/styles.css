@@ -102,37 +102,35 @@ h1 {
     radial-gradient(circle at 100% 0%, rgba(159, 183, 189, 0.2), transparent 10rem);
   box-shadow: 0 22px 58px rgba(104, 25, 30, 0.1);
   transform-style: preserve-3d;
-  opacity: 0;
-  transform: translateY(74px) rotateX(11deg) rotateZ(var(--enter-rotate, 0deg)) scale(0.94);
+  opacity: 1;
+  transform: translateZ(0);
   transform-origin: 50% 100%;
   transition: border-color 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
-  animation: mapCardIn 0.92s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   backface-visibility: hidden;
+  will-change: transform, opacity, filter;
 }
 
-.map-card:nth-child(1) {
-  --enter-rotate: -2.4deg;
-  animation-delay: 0.32s;
+.map-rail.is-stacked .map-card {
+  z-index: var(--stack-order, 1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate3d(var(--from-x, 0), var(--from-y, 0), 0) rotate(var(--stack-rotate, 0deg)) scale(0.94);
+  filter: blur(3px);
 }
 
-.map-card:nth-child(2) {
-  --enter-rotate: 1.4deg;
-  animation-delay: 0.44s;
+.map-rail.is-stacked.is-ready .map-card {
+  opacity: 0.76;
+  filter: blur(1px);
 }
 
-.map-card:nth-child(3) {
-  --enter-rotate: -0.8deg;
-  animation-delay: 0.56s;
+.map-rail.is-spread .map-card {
+  animation: dealCard 1.05s cubic-bezier(0.16, 1, 0.3, 1) var(--deal-delay, 0s) forwards;
 }
 
-.map-card:nth-child(4) {
-  --enter-rotate: 1.8deg;
-  animation-delay: 0.68s;
-}
-
-.map-card:nth-child(5) {
-  --enter-rotate: -1.2deg;
-  animation-delay: 0.8s;
+.map-card.is-entered {
+  opacity: 1;
+  transform: translateZ(0);
+  filter: none;
 }
 
 .map-card:nth-child(2n) {
@@ -229,10 +227,6 @@ h1 {
   line-height: 1.32;
 }
 
-.map-card.is-entered {
-  opacity: 1;
-}
-
 @keyframes mapTitleIn {
   to {
     opacity: 1;
@@ -240,16 +234,22 @@ h1 {
   }
 }
 
-@keyframes mapCardIn {
+@keyframes dealCard {
   0% {
-    opacity: 0;
-    transform: translateY(74px) rotateX(11deg) rotateZ(var(--enter-rotate, 0deg)) scale(0.94);
-    filter: blur(5px);
+    opacity: 0.76;
+    transform: translate3d(var(--from-x, 0), var(--from-y, 0), 0) rotate(var(--stack-rotate, 0deg)) scale(0.94);
+    filter: blur(1px);
   }
 
-  62% {
+  38% {
+    opacity: 0.92;
+    transform: translate3d(var(--mid-x, 0), var(--mid-y, -18px), 0) rotate(var(--mid-rotate, 0deg)) scale(1.02);
+    filter: blur(0);
+  }
+
+  74% {
     opacity: 1;
-    transform: translateY(-8px) rotateX(-1deg) rotateZ(calc(var(--enter-rotate, 0deg) * -0.25)) scale(1.012);
+    transform: translate3d(0, -9px, 0) rotate(var(--settle-rotate, 0deg)) scale(1.01);
     filter: blur(0);
   }
 
@@ -266,6 +266,12 @@ h1 {
     opacity: 1;
     transform: none;
     animation: none;
+  }
+
+  .map-rail.is-stacked .map-card {
+    opacity: 1;
+    transform: none;
+    filter: none;
   }
 }
 
