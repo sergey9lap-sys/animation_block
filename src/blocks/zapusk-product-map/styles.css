@@ -165,13 +165,28 @@ h1 {
   box-shadow: 0 18px 44px rgba(20, 20, 20, 0.18);
 }
 
-.map-avatar img {
+.map-avatar svg {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
-  object-position: center 24%;
-  filter: saturate(0.98) contrast(1.02);
+  padding: 8px;
+  color: var(--wine);
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.4;
+}
+
+.map-avatar svg circle,
+.map-avatar svg rect,
+.map-avatar svg path {
+  vector-effect: non-scaling-stroke;
+}
+
+.map-avatar svg path:first-child,
+.map-avatar svg circle:first-child {
+  fill: rgba(104, 25, 30, 0.08);
 }
 
 .map-card h2 {
@@ -203,6 +218,15 @@ h1 {
 .map-card:nth-child(2n) p,
 .map-card:nth-child(2n) small {
   color: rgba(255, 248, 239, 0.76);
+}
+
+.map-card:nth-child(2n) .map-avatar svg {
+  color: #fff8ef;
+}
+
+.map-card:nth-child(2n) .map-avatar svg path:first-child,
+.map-card:nth-child(2n) .map-avatar svg circle:first-child {
+  fill: rgba(255, 248, 239, 0.14);
 }
 
 .map-products {

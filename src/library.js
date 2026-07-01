@@ -7,8 +7,8 @@ const blocks = [
   },
   {
     number: "02",
-    title: "Zapusk / product map",
-    description: "Карточки типов экспертов и подходящих продуктов из проекта zapusk.",
+    title: "Interface reading / card deck",
+    description: "Карточки о том, как взгляд читает интерфейс: фокус, контраст, маршрут, повтор и действие.",
     href: "./zapusk-product-map/",
   },
   {
