@@ -1,0 +1,231 @@
+:root {
+  --paper: #fff4e4;
+  --paper-soft: #fff8ef;
+  --ink: #171313;
+  --muted: #6f5953;
+  --wine: #68191e;
+  --grid: rgba(104, 25, 30, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: Inter, Arial, sans-serif;
+}
+
+.back-link {
+  position: fixed;
+  left: 18px;
+  top: 18px;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid rgba(104, 25, 30, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 248, 239, 0.72);
+  color: var(--wine);
+  backdrop-filter: blur(14px);
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.page {
+  min-height: 100svh;
+}
+
+.product-map {
+  min-height: 100svh;
+  padding: clamp(72px, 9vw, 128px) clamp(18px, 4vw, 72px);
+  overflow: hidden;
+  background:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px),
+    radial-gradient(circle at 72% 42%, rgba(104, 25, 30, 0.12), transparent 28rem),
+    linear-gradient(180deg, #fff0db 0%, #fff8ef 100%);
+  background-size: 72px 72px, 72px 72px, auto, auto;
+}
+
+.map-shell {
+  width: min(100%, 1760px);
+  margin: 0 auto;
+}
+
+h1 {
+  max-width: 1050px;
+  margin: 0 0 clamp(48px, 6vw, 78px);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(38px, 4.5vw, 72px);
+  line-height: 1.03;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.map-window {
+  width: 100%;
+  overflow: visible;
+  perspective: 1400px;
+}
+
+.map-rail {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+  width: 100%;
+  transform-style: preserve-3d;
+}
+
+.map-card {
+  position: relative;
+  display: grid;
+  grid-template-rows: 58px 112px 1fr;
+  row-gap: 16px;
+  width: 100%;
+  min-height: 430px;
+  padding: 24px 24px 26px;
+  overflow: hidden;
+  border: 1px solid rgba(104, 25, 30, 0.28);
+  border-radius: 8px;
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.92), rgba(255, 244, 228, 0.68)),
+    radial-gradient(circle at 100% 0%, rgba(159, 183, 189, 0.2), transparent 10rem);
+  box-shadow: 0 22px 58px rgba(104, 25, 30, 0.1);
+  transform-style: preserve-3d;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  backface-visibility: hidden;
+}
+
+.map-card:nth-child(2n) {
+  color: #fff8ef;
+  border-color: rgba(255, 244, 228, 0.22);
+  background:
+    linear-gradient(145deg, #8a2228, var(--wine) 54%, #461014),
+    var(--wine);
+}
+
+.map-card:hover {
+  border-color: rgba(104, 25, 30, 0.52);
+  box-shadow: 0 34px 82px rgba(104, 25, 30, 0.2);
+  filter: saturate(1.03);
+}
+
+.map-avatar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 42px;
+  height: 42px;
+  overflow: hidden;
+  border: 1px solid rgba(104, 25, 30, 0.18);
+  border-radius: 999px;
+  background: var(--paper-soft);
+  box-shadow: 0 18px 44px rgba(104, 25, 30, 0.14);
+}
+
+.map-card:nth-child(2n) .map-avatar {
+  border-color: rgba(255, 244, 228, 0.32);
+  box-shadow: 0 18px 44px rgba(20, 20, 20, 0.18);
+}
+
+.map-avatar img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center 24%;
+  filter: saturate(0.98) contrast(1.02);
+}
+
+.map-card h2 {
+  align-self: start;
+  max-width: none;
+  min-height: 46px;
+  margin: 0;
+  padding-right: 58px;
+  font-size: clamp(17px, 1.06vw, 20px);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.map-card:nth-child(1) h2,
+.map-card:nth-child(4) h2 {
+  font-size: clamp(16px, 1vw, 19px);
+}
+
+.map-card p {
+  align-self: start;
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(15px, 1vw, 17px);
+  line-height: 1.36;
+}
+
+.map-card:nth-child(2n) p,
+.map-card:nth-child(2n) small {
+  color: rgba(255, 248, 239, 0.76);
+}
+
+.map-products {
+  border-top: 1px solid currentColor;
+  padding-top: 18px;
+}
+
+.map-products small {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--wine);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.map-products strong {
+  display: block;
+  margin-top: 10px;
+  font-size: clamp(14px, 0.95vw, 16px);
+  line-height: 1.32;
+}
+
+.map-after {
+  margin: clamp(54px, 7vw, 88px) 0 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(36px, 4.2vw, 68px);
+  line-height: 1;
+}
+
+@media (max-width: 1120px) {
+  .map-rail {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .product-map {
+    padding: 72px 16px 48px;
+  }
+
+  h1 {
+    margin-bottom: 30px;
+    font-size: clamp(30px, 9vw, 42px);
+  }
+
+  .map-rail {
+    grid-template-columns: 1fr;
+  }
+
+  .map-card {
+    min-height: 390px;
+    grid-template-rows: auto auto auto;
+  }
+}
