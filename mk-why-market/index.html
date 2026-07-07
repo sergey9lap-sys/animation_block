@@ -3,23 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Рынок премиальных продуктов</title>
+    <title>Как строится история в интерфейсе</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../src/blocks/mk-why-market/styles.css" />
   </head>
   <body>
     <a class="back-link" href="../">Все блоки</a>
-    <section class="why">
-      <span>Зачем идти</span>
-      <h1>Рынок премиальных продуктов продолжает расти, «бутиковые продукты» также нужны аудитории, но такая аудитория теперь покупает по-другому.</h1>
-      <article>
-        <small>АКТ I</small><i>1/5</i>
-        <h2>Что такое премиальный продукт на самом деле</h2>
-        <p>Не всё, что называют премиальным, действительно им является. Разберём ключевые критерии, эффект «бутикового продукта» и то, как он работает в онлайн-образовании.</p>
-        <b>01</b>
-      </article>
-    </section>
+    <main>
+      <section class="section why cinematic" data-cinematic>
+        <div class="cinematic-glow" aria-hidden="true"></div>
+        <div class="cinematic-intro">
+          <span class="kicker">Сторителлинг</span>
+          <h2 data-split>КАК СТРОИТСЯ ИСТОРИЯ В ИНТЕРФЕЙСЕ</h2>
+        </div>
+        <div class="act-stage">
+          <article class="act-card" data-act><div class="act-frame" aria-hidden="true"></div><span class="act-ghost">01</span><div class="act-meta"><small>АКТ 1</small><i>1/5</i></div><h3>Контекст</h3><p>Пользователь понимает, где находится, зачем открыт этот экран и какой смысл будет раскрываться дальше.</p></article>
+          <article class="act-card" data-act><div class="act-frame" aria-hidden="true"></div><span class="act-ghost">02</span><div class="act-meta"><small>АКТ 2</small><i>2/5</i></div><h3>Интерес</h3><p>Первый заметный акцент цепляет внимание и создает желание изучить следующий фрагмент интерфейса.</p></article>
+          <article class="act-card" data-act><div class="act-frame" aria-hidden="true"></div><span class="act-ghost">03</span><div class="act-meta"><small>АКТ 3</small><i>3/5</i></div><h3>Развитие</h3><p>Элементы складываются в маршрут: пользователь видит связи, сравнивает детали и собирает общую картину.</p></article>
+          <article class="act-card" data-act><div class="act-frame" aria-hidden="true"></div><span class="act-ghost">04</span><div class="act-meta"><small>АКТ 4</small><i>4/5</i></div><h3>Кульминация</h3><p>Главная мысль становится очевидной, а визуальная иерархия помогает быстро отделить важное от фона.</p></article>
+          <article class="act-card" data-act><div class="act-frame" aria-hidden="true"></div><span class="act-ghost">05</span><div class="act-meta"><small>АКТ 5</small><i>5/5</i></div><h3>Финал</h3><p>История завершается понятной точкой: пользователь знает, что произошло и какое действие логично следующим.</p></article>
+        </div>
+        <div class="scroll-hint" data-scroll-hint aria-hidden="true"><span></span></div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+    <script src="../src/blocks/mk-why-market/main.js"></script>
   </body>
 </html>

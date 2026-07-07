@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Что разберем на тренинге</title>
+    <title>Как рождается интерфейс</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
@@ -11,20 +11,68 @@
   </head>
   <body>
     <a class="back-link" href="../">Все блоки</a>
-    <section class="game">
-      <h1>Что разберем на тренинге</h1>
-      <p>7 точек, из которых собирается игровая воронка для запуска</p>
-      <div class="field">
-        <svg viewBox="0 0 980 760" aria-hidden="true"><path d="M190 170 C360 150 330 320 470 330 C610 340 610 150 780 160"/><path d="M760 270 C720 390 520 360 430 480 C350 590 210 550 180 660"/><path d="M250 640 C390 700 520 650 650 660 C760 670 770 600 860 610"/></svg>
-        <article class="c1"><span>01</span><h2>Как устроена игровая воронка</h2><p>И почему она обходит рациональное сопротивление клиента.</p></article>
-        <article class="c2"><span>02</span><h2>4 этапа воронки</h2><p>Привлечение, вовлечение, трансформация, действие.</p></article>
-        <article class="c3"><span>03</span><h2>Квест-формат эфиров</h2><p>Как превратить любой эфир в квест.</p></article>
-        <article class="c4"><span>04</span><h2>Игровой прогрев</h2><p>Как выстроить прогрев как приключение.</p></article>
-        <article class="c5"><span>05</span><h2>Типы игроков по Бартлу</h2><p>Кто ваша аудитория и как под каждого выстроить механику.</p></article>
-        <article class="c6"><span>06</span><h2>Рабочие механики</h2><p>Прогрессия, награда, социальное доказательство.</p></article>
-        <article class="c7"><span>07</span><h2>Как не сломать запуск</h2><p>С чего начать, как тестировать и что измерять.</p></article>
+    <section class="program section-pad" aria-labelledby="program-title">
+      <div class="program-head">
+        <h2 id="program-title">КАК<br />РОЖДАЕТСЯ<br />ИНТЕРФЕЙС</h2>
+        <p>7 точек, из которых собирается понятный экран</p>
+      </div>
+      <div class="program-board">
+        <svg class="program-lines program-lines-desktop" viewBox="0 0 1120 940" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <marker id="program-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+              <path d="M1 1 L8 5 L1 9" />
+            </marker>
+          </defs>
+          <path class="program-line program-line-1" pathLength="1" d="M306 176 C372 176 390 220 432 238" />
+          <path class="program-line program-line-2" pathLength="1" d="M608 226 C675 192 704 154 780 150" />
+          <path class="program-line program-line-3" pathLength="1" d="M946 236 C990 280 982 326 928 360" />
+          <path class="program-line program-line-4" pathLength="1" d="M884 498 C700 486 466 474 314 550" />
+          <path class="program-line program-line-5" pathLength="1" d="M326 612 C408 646 470 648 548 628" />
+          <path class="program-line program-line-6" pathLength="1" d="M780 646 C856 664 900 682 946 690" />
+        </svg>
+        <svg class="program-lines program-lines-mobile" viewBox="0 0 100 760" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <marker id="program-mobile-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+              <path d="M1 1 L8 5 L1 9" />
+            </marker>
+          </defs>
+          <path class="program-line program-line-1" pathLength="1" d="M50 40 V145" />
+          <path class="program-line program-line-2" pathLength="1" d="M50 160 V265" />
+          <path class="program-line program-line-3" pathLength="1" d="M50 280 V385" />
+          <path class="program-line program-line-4" pathLength="1" d="M50 400 V505" />
+          <path class="program-line program-line-5" pathLength="1" d="M50 520 V625" />
+          <path class="program-line program-line-6" pathLength="1" d="M50 640 V735" />
+        </svg>
+        <span class="board-cursor" aria-hidden="true"></span>
+        <span class="board-chip board-chip-one" aria-hidden="true">система</span>
+        <span class="board-chip board-chip-two" aria-hidden="true">интерфейс</span>
+        <span class="board-dot board-dot-one" aria-hidden="true"></span>
+        <span class="board-dot board-dot-two" aria-hidden="true"></span>
+        <article class="program-card program-card-1 attach-tape tone-mint">
+          <span class="mini-clip"></span><span class="card-index">01</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5"/><path d="M4 19h16"/><path d="m7 15 4-4 3 3 5-6"/></svg><h3>Исследование</h3><p>Помогает понять контекст, задачи и ожидания пользователя до появления формы.</p><span class="tape"></span>
+        </article>
+        <article class="program-card program-card-2 attach-pin tone-lavender">
+          <span class="mini-clip"></span><span class="card-index">02</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg><h3>Структура</h3><p>Раскладывает информацию по уровням, чтобы экран читался без лишнего усилия.</p><span class="tape"></span>
+        </article>
+        <article class="program-card program-card-3 attach-clip tone-paper">
+          <span class="mini-clip"></span><span class="card-index">03</span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="16" height="6"/></svg><h3>Композиция</h3><p>Собирает элементы в устойчивый визуальный маршрут и задает главный фокус.</p><span class="tape"></span>
+        </article>
+        <article class="program-card program-card-4 attach-tag tone-warm">
+          <span class="mini-clip"></span><span class="card-index">04</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg><h3>Типографика</h3><p>Управляет скоростью чтения, иерархией и характером всего интерфейса.</p><span class="tape"></span>
+        </article>
+        <article class="program-card program-card-5 attach-tape tone-lavender">
+          <span class="mini-clip"></span><span class="card-index">05</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg><h3>Анимация</h3><p>Показывает связь между состояниями и делает реакцию интерфейса понятной.</p><span class="tape"></span>
+        </article>
+        <article class="program-card program-card-6 attach-pin tone-warm">
+          <span class="mini-clip"></span><span class="card-index">06</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><h3>Тестирование</h3><p>Проверяет, где пользователь теряет внимание, сомневается или пропускает действие.</p><span class="tape"></span>
+        </article>
+        <article class="program-card program-card-7 attach-corner tone-mint">
+          <span class="mini-clip"></span><span class="card-index">07</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><h3>Финальная версия</h3><p>Оставляет только те решения, которые помогают быстрее понять и сделать шаг.</p><span class="tape"></span>
+        </article>
       </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="../src/blocks/game-training-map/main.js"></script>
   </body>
 </html>

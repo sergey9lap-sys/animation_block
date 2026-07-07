@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 720">
+  <rect x="24" y="12" width="312" height="696" rx="48" fill="#160b2a"/>
+  <rect x="42" y="34" width="276" height="652" rx="36" fill="#f7efe8"/>
+  <rect x="128" y="46" width="104" height="12" rx="6" fill="#160b2a" opacity=".4"/>
+  <rect x="68" y="82" width="132" height="22" rx="11" fill="#5b37c7"/>
+  <rect x="68" y="130" width="224" height="132" rx="26" fill="#3a2375"/>
+  <circle cx="116" cy="196" r="38" fill="#ffe1bf"/>
+  <path d="M170 174h82M170 204h58" stroke="#fff1dc" stroke-width="14" stroke-linecap="round"/>
+  <rect x="68" y="292" width="224" height="72" rx="22" fill="#fff"/>
+  <path d="M96 328h94M96 350h150" stroke="#5f5280" stroke-width="10" stroke-linecap="round" opacity=".54"/>
+  <rect x="68" y="390" width="98" height="112" rx="24" fill="#c9b2e7"/>
+  <rect x="194" y="390" width="98" height="112" rx="24" fill="#ffe1bf"/>
+  <path d="M92 560h176" stroke="#5b37c7" stroke-width="18" stroke-linecap="round"/>
+  <rect x="86" y="604" width="188" height="48" rx="24" fill="#5b37c7"/>
+  <text x="180" y="635" text-anchor="middle" fill="#fff1dc" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">Completed</text>
+</svg>

@@ -50,6 +50,9 @@ header p {
   position: relative;
   min-height: 620px;
   margin-top: 72px;
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 svg {
@@ -70,7 +73,7 @@ path {
 
 article {
   position: absolute;
-  width: 280px;
+  width: 300px;
   min-height: 128px;
   display: flex;
   align-items: center;
@@ -96,12 +99,12 @@ article::after {
   background: rgba(255, 255, 255, 0.52);
 }
 
-.t1 { left: 18%; top: 0; }
-.t2 { left: 50%; top: -18px; }
-.t3 { right: 1%; top: 44px; }
-.t4 { left: 25%; bottom: 54px; }
-.t5 { left: 50%; bottom: 20px; }
-.t6 { right: 1%; bottom: 54px; }
+.t1 { left: 9%; top: 0; }
+.t2 { left: 45%; top: -24px; }
+.t3 { right: 0; top: 82px; }
+.t4 { left: 13%; bottom: 76px; }
+.t5 { left: 45%; bottom: 4px; }
+.t6 { right: 0; bottom: 82px; }
 
 .insight {
   width: min(760px, 100%);

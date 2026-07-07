@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 780">
+  <defs>
+    <linearGradient id="g" x1="120" x2="640" y1="80" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f8dfb6"/>
+      <stop offset=".52" stop-color="#c9b2e7"/>
+      <stop offset="1" stop-color="#6e275b"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="780" fill="#f7efe8"/>
+  <circle cx="520" cy="160" r="126" fill="#e9d8f1"/>
+  <rect x="92" y="116" width="422" height="126" rx="22" fill="url(#g)"/>
+  <rect x="118" y="300" width="486" height="40" rx="20" fill="#332039" opacity=".86"/>
+  <rect x="118" y="372" width="338" height="32" rx="16" fill="#6e275b" opacity=".72"/>
+  <rect x="118" y="434" width="440" height="32" rx="16" fill="#6e275b" opacity=".42"/>
+  <text x="126" y="211" fill="#fffaf2" font-family="Inter, Arial, sans-serif" font-size="104" font-weight="800">Aa</text>
+  <text x="360" y="600" fill="#2b1c31" font-family="Georgia, serif" font-size="190" font-weight="700">T</text>
+  <path d="M114 626 C216 546 288 704 392 632 C486 568 532 596 612 684" fill="none" stroke="#6e275b" stroke-width="18" stroke-linecap="round" opacity=".32"/>
+</svg>

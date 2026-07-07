@@ -3,24 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Вам знакомы эти ситуации?</title>
+    <title>Частые ошибки интерфейсов</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../src/blocks/best-problems/styles.css" />
   </head>
   <body>
     <a class="back-link" href="../">Все блоки</a>
-    <section class="scene">
-      <div class="copy"><span>01</span><h1>Вам знакомы<br />эти ситуации?</h1></div>
-      <div class="board">
-        <svg viewBox="0 0 760 520" aria-hidden="true"><path d="M182 142 C286 124 420 128 574 150"/><path d="M574 170 C528 258 448 320 310 376"/><path d="M310 398 C420 410 526 398 636 382"/></svg>
-        <article class="note n1"><i></i><b>01</b><p>На совещании собрались сильные специалисты, но решение так и не найдено.</p></article>
-        <article class="note n2"><em></em><b>02</b><p>Команда обсуждает вопрос часами, а после встречи каждый остаётся при своём мнении.</p></article>
-        <article class="note n3"><i></i><b>03</b><p>Сотрудники молчат, соглашаются с большинством или поддерживают позицию руководителя, хотя видят риски.</p></article>
-        <article class="note n4"><em></em><b>04</b><p>На решение простой задачи уходят недели согласований.</p></article>
-      </div>
-    </section>
+    <main>
+      <section class="section section-beige" aria-labelledby="situations-title">
+        <div class="container section-grid">
+          <div class="section-head reveal">
+            <p class="section-number">01</p>
+            <h2 id="situations-title"><span>ЧАСТЫЕ</span><span>ОШИБКИ</span><span>ИНТЕРФЕЙСОВ</span></h2>
+          </div>
+          <div class="problem-list problem-board reveal">
+            <svg class="board-lines" viewBox="0 0 760 520" aria-hidden="true" focusable="false">
+              <path class="board-line board-line--1" d="M182 142 C286 124 420 128 574 150" />
+              <path class="board-line board-line--2" d="M574 170 C528 258 448 320 310 376" />
+              <path class="board-line board-line--3" d="M310 398 C420 410 526 398 636 382" />
+            </svg>
+            <article class="problem-card problem-card--sticker">
+              <span class="note-pin"></span>
+              <span class="note-index">01</span>
+              <span class="card-line"></span>
+              <p>Нет визуальной иерархии.</p>
+            </article>
+            <article class="problem-card problem-card--paper">
+              <span class="note-tape"></span>
+              <span class="note-index">02</span>
+              <span class="card-line"></span>
+              <p>Все элементы одинаково важны.</p>
+            </article>
+            <article class="problem-card problem-card--marker">
+              <span class="note-pin"></span>
+              <span class="note-index">03</span>
+              <span class="card-line"></span>
+              <p>Пользователь не понимает, куда нажать.</p>
+            </article>
+            <article class="problem-card problem-card--document">
+              <span class="note-tape note-tape--small"></span>
+              <span class="note-index">04</span>
+              <span class="card-line"></span>
+              <p>Экран перегружен информацией.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
     <script src="../src/blocks/best-problems/main.js"></script>
   </body>
 </html>

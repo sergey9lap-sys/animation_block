@@ -3,23 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Напишите нам в мессенджер</title>
+    <title>Живой интерфейс</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../src/blocks/mk-contact/styles.css" />
+    <link rel="stylesheet" href="../src/blocks/mk-contact/styles.css?v=20260707-2" />
   </head>
   <body>
     <a class="back-link" href="../">Все блоки</a>
-    <section class="support">
-      <div class="ambient" aria-hidden="true"><span>Какой тариф выбрать?</span><span>Есть ли запись?</span><span>Что входит в тариф?</span><span>Подойдет ли мне программа?</span></div>
-      <div class="copy">
-        <span>Остались вопросы?</span>
-        <h1>Напишите<br />нам в любой<br />удобный<br />мессенджер</h1>
-        <p>Команда заботы поможет с тарифами, записью эфира и любыми вопросами по участию.</p>
-        <div><a href="#">Телеграм</a><a href="#">Макс</a><a href="#">ВКонтакте</a></div>
-      </div>
-      <img src="../src/blocks/mk-contact/assets/phone.webp" alt="Служба заботы" />
-    </section>
+    <main>
+      <section class="final-cta support-section" data-support>
+        <div class="ambient-questions" aria-hidden="true">
+          <span>Подсказка</span>
+          <span>Сохраняем</span>
+          <span>Готово</span>
+          <span>Ответ</span>
+        </div>
+        <div class="support-copy">
+          <span class="kicker">Микрореакции</span>
+          <h2>ЖИВОЙ ИНТЕРФЕЙС</h2>
+          <p>Состояния, подсказки и короткие реакции делают экран понятным в момент взаимодействия.</p>
+          <div class="support-actions">
+            <a href="#">Сохранено</a>
+            <a href="#">Готово</a>
+            <a href="#">Принято</a>
+          </div>
+        </div>
+        <div class="support-phone-wrap">
+          <span class="flying-question flying-question-1" data-question>Новая заявка</span>
+          <span class="flying-question flying-question-2" data-question>Ответ готов</span>
+          <span class="flying-question flying-question-3" data-question>Материал открыт</span>
+          <span class="flying-question flying-question-4" data-question>Оплата прошла</span>
+          <span class="flying-question flying-question-5" data-question>Код принят</span>
+          <img src="../public/photo_2026-06-12%2022.55.52-portrait.png?v=20260707-2" alt="Телефон с живым интерфейсом" />
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+    <script src="../src/blocks/mk-contact/main.js"></script>
   </body>
 </html>

@@ -3,24 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Путь из трех этапов</title>
+    <title>Путь пользователя</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../src/blocks/mk-route-steps/styles.css" />
   </head>
   <body>
     <a class="back-link" href="../">Все блоки</a>
-    <section class="route">
-      <h1>Путь из трёх этапов: эфир,<br />внедрение, живые разборы.</h1>
-      <div class="map">
-        <svg viewBox="0 0 900 640" aria-hidden="true"><path d="M450 5 C430 110 580 130 600 235 C630 370 320 350 330 470 C340 570 470 590 450 635"/></svg>
-        <span class="start">Старт</span>
-        <article class="r1"><mark>Эфир</mark><small>18 июня</small><h2>Эфир</h2><p>Методология создания премиальных продуктов, актуальные форматы, ценообразование и упаковка.</p></article>
-        <article class="r2"><mark>Внедрение</mark><small>18–29 июня</small><h2>Практика</h2><p>Задания и внедрение в собственный проект.</p></article>
-        <article class="r3"><mark>Разборы</mark><small>29 июня</small><h2>Живые разборы</h2><p>Разбираем решения участников и доводим продуктовую логику до ясности.</p></article>
-      </div>
-    </section>
+    <main>
+      <section class="section format route-section" id="format">
+        <div class="route-head">
+          <h2 data-split data-route-title>ПУТЬ ПОЛЬЗОВАТЕЛЯ</h2>
+        </div>
+        <div class="route-map" data-route-map>
+          <svg class="route-svg route-svg-desktop" viewBox="0 0 1120 1220" preserveAspectRatio="none" aria-hidden="true">
+            <path data-route-path d="M560 8 C540 120 708 148 726 250 C752 404 394 386 390 546 C386 724 726 678 724 860 C722 1012 568 1040 560 1212" />
+          </svg>
+          <svg class="route-svg route-svg-mobile" viewBox="0 0 360 1220" preserveAspectRatio="none" aria-hidden="true">
+            <path data-route-path d="M70 8 C58 138 74 238 166 318 C282 420 306 520 208 628 C88 760 76 880 190 1008 C258 1084 238 1166 190 1212" />
+          </svg>
+          <div class="route-start" data-route-start>Старт</div>
+          <article class="route-card" data-route-card>
+            <span class="route-dot" data-route-dot></span>
+            <span class="route-number">02</span>
+            <div class="route-card-content" data-route-content>
+              <mark>Изучение</mark><small>02</small><h3>Изучение</h3>
+              <p>Пользователь сравнивает блоки, замечает повторяющиеся паттерны и понимает структуру.</p>
+            </div>
+          </article>
+          <article class="route-card" data-route-card>
+            <span class="route-dot" data-route-dot></span>
+            <span class="route-number">03</span>
+            <div class="route-card-content" data-route-content>
+              <mark>Взаимодействие</mark><small>03</small><h3>Взаимодействие</h3>
+              <p>Анимация подтверждает действие и показывает, что интерфейс реагирует понятно.</p>
+            </div>
+          </article>
+          <article class="route-card is-final" data-route-card>
+            <span class="route-dot" data-route-dot></span>
+            <span class="route-number">04</span>
+            <div class="route-card-content" data-route-content>
+              <mark>Результат</mark><small>04</small><h3>Результат</h3>
+              <p>Финальная точка собирает сценарий и оставляет ощущение ясного завершения.</p>
+            </div>
+          </article>
+          <div class="route-next" data-route-next>
+            <span>Финиш — понятный сценарий</span>
+            <a class="route-finish" href="../">Все блоки</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
     <script src="../src/blocks/mk-route-steps/main.js"></script>
   </body>
 </html>
