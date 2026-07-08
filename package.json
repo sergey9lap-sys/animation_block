@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "build": "rm -rf dist && mkdir -p dist && cp -R index.html best-audience best-problems best-program expert-contact expert-problems expert-values expert-webinar-plan game-training-map mk-after mk-contact mk-dossiers mk-route-steps mk-why-market orion public src zapusk-product-map dist/"
+  }
+}
