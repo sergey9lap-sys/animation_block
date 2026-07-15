@@ -2854,41 +2854,41 @@ h1 {
 }
 
 .flying-question-1 {
-  top: 10%;
-  left: -168px;
-  --tx: 214px;
-  --ty: 82px;
+  top: 13%;
+  left: -112px;
+  --tx: 164px;
+  --ty: 76px;
 }
 
 .flying-question-2 {
-  top: 29%;
-  left: -190px;
-  --tx: 240px;
-  --ty: 20px;
+  top: 28%;
+  right: -118px;
+  --tx: -166px;
+  --ty: 28px;
   animation-delay: 0.72s;
 }
 
 .flying-question-3 {
-  left: -172px;
-  bottom: 35%;
-  --tx: 226px;
-  --ty: -36px;
+  left: -124px;
+  bottom: 34%;
+  --tx: 176px;
+  --ty: -42px;
   animation-delay: 1.44s;
 }
 
 .flying-question-4 {
-  left: -132px;
-  bottom: 18%;
-  --tx: 194px;
-  --ty: -106px;
+  right: -128px;
+  bottom: 17%;
+  --tx: -180px;
+  --ty: -104px;
   animation-delay: 2.16s;
 }
 
 .flying-question-5 {
-  left: 18px;
-  bottom: -24px;
-  --tx: 82px;
-  --ty: -154px;
+  top: -24px;
+  left: 92px;
+  --tx: 72px;
+  --ty: 148px;
   animation-delay: 2.88s;
 }
 
