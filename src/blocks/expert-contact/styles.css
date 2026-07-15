@@ -139,11 +139,11 @@ p {
   animation: flyToPhone 4.2s ease-in-out infinite;
 }
 
-.phone-message-1 { left: -168px; top: 10%; --tx: 214px; --ty: 82px; animation-delay: 0.1s; }
-.phone-message-2 { left: -190px; top: 29%; --tx: 240px; --ty: 20px; animation-delay: 0.72s; }
-.phone-message-3 { left: -172px; bottom: 35%; --tx: 226px; --ty: -36px; animation-delay: 1.34s; }
-.phone-message-4 { left: -132px; bottom: 18%; --tx: 194px; --ty: -106px; animation-delay: 1.96s; }
-.phone-message-5 { left: 18px; bottom: -24px; --tx: 82px; --ty: -154px; animation-delay: 2.58s; }
+.phone-message-1 { left: -112px; top: 13%; --tx: 164px; --ty: 76px; animation-delay: 0.1s; }
+.phone-message-2 { right: -118px; top: 28%; --tx: -166px; --ty: 28px; animation-delay: 0.72s; }
+.phone-message-3 { left: -124px; bottom: 34%; --tx: 176px; --ty: -42px; animation-delay: 1.34s; }
+.phone-message-4 { right: -128px; bottom: 17%; --tx: -180px; --ty: -104px; animation-delay: 1.96s; }
+.phone-message-5 { left: 92px; top: -24px; --tx: 72px; --ty: 148px; animation-delay: 2.58s; }
 
 body > img {
   position: relative;
